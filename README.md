@@ -82,3 +82,7 @@ Both functions were created and tested locally before being deployed to Azure.
 - Azure Storage Account and Queue: `myqueue-items`
 - Azure SQL Server and Database
 - Azure Function App for deployment
+
+## Youtube Video
+
+https://www.youtube.com/watch?v=prJ4XeSSjrM
