@@ -24,7 +24,7 @@ Both functions were created and tested locally before being deployed to Azure.
 ### Storage Queue Function
 
 1. Create a Storage Account on Azure.
-2. Set up a Queue named `myqueue-items`.
+2. Set up a Queue named `outqueue`.
 3. Update `local.settings.json` with your storage connection string:
    ```json
    {
@@ -40,13 +40,15 @@ Both functions were created and tested locally before being deployed to Azure.
 1. Create an Azure SQL Database and SQL Server.
 2. Create a table using the following schema:
    ```sql
-   CREATE TABLE ToDo (
-       Id UNIQUEIDENTIFIER PRIMARY KEY,
-       title NVARCHAR(255),
-       completed BIT,
-       url NVARCHAR(2048)
+   CREATE TABLE dbo.ToDo (
+    [Id] UNIQUEIDENTIFIER PRIMARY KEY,
+    [order] INT NULL,
+    [title] NVARCHAR(200) NOT NULL,
+    [url] NVARCHAR(200) NOT NULL,
+    [completed] BIT NOT NULL
    );
    ```
+
 3. Update `local.settings.json` with your SQL connection string:
    ```json
    {
@@ -58,10 +60,8 @@ Both functions were created and tested locally before being deployed to Azure.
 
 ## Running Locally
 
-1. Navigate to the project root:
-   ```bash
-   cd CST8917
-   ```
+1. Navigate to the project root through VS code:
+   -
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
@@ -73,13 +73,13 @@ Both functions were created and tested locally before being deployed to Azure.
 
 ## Testing
 
-- Trigger the Storage Queue function via an HTTP request (e.g., using Postman or curl).
+- Trigger the Storage Queue function via an HTTP request 
 - Verify that a message is added to the storage queue.
 - Trigger the Azure SQL function similarly and confirm a new record is inserted into the database.
 
 ## Azure Resources Created
 
-- Azure Storage Account and Queue: `myqueue-items`
+- Azure Storage Account and Queue: `outqueue`
 - Azure SQL Server and Database
 - Azure Function App for deployment
 
