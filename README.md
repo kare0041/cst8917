@@ -77,11 +77,9 @@ Both functions were created and tested locally before being deployed to Azure.
 - Verify that a message is added to the storage queue.
 - Trigger the Azure SQL function similarly and confirm a new record is inserted into the database.
 
-## Azure Resources Created
+## Important
 
-- Azure Storage Account and Queue: `outqueue`
-- Azure SQL Server and Database
-- Azure Function App for deployment
+The function_app.py code has been updated from Storage Queue output binding to Azure SQL Database output binding. In order to access the function code that performs output binding to Azure Storage queue, please refer to the first commit named "adding an HTTP trigger function app files with Storage Queue output binding"
 
 ## Youtube Video
 
