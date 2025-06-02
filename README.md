@@ -3,16 +3,6 @@
 
 This project demonstrates the use of Azure Functions with Storage Queue and Azure SQL output bindings using Python and Visual Studio Code.
 
-## Table of Contents
-- [Overview](#overview)
-- [Prerequisites](#prerequisites)
-- [Setup Instructions](#setup-instructions)
-  - [Storage Queue Function](#storage-queue-function)
-  - [Azure SQL Function](#azure-sql-function)
-- [Running Locally](#running-locally)
-- [Testing](#testing)
-- [Azure Resources Created](#azure-resources-created)
-
 ## Overview
 
 This project includes:
